@@ -1,0 +1,15 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  min-width: 1200px;
+  cursor: default; }
+
+html, body, p, h1, h2, h3, h4, h5, h6, ul, li, table, th, tr, td, dl, dt, img, i, input {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=public.css.map */

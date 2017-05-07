@@ -1,0 +1,21 @@
+@import "base";
+
+@each $name , $font in $fontS{//
+  .font-#{$name}{
+    font-size:$font;
+  }
+  .font-line-#{$name}{
+    @if #{$name} == huge{
+      line-height: 45px;
+    }@else if #{$name} == big{
+      line-height: 37px;
+    }@else if #{$name} == medium{
+      line-height: 30px;
+    }@else if #{$name} == normal{
+      line-height: 25px;
+    }@else if #{$name} == small{
+      line-height: 20px;
+    }
+  }
+}
+

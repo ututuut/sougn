@@ -1,0 +1,43 @@
+.bgc-primary {
+  background-color: #1976d2; }
+
+.bgc-light {
+  background-color: #63a4ff; }
+
+.bgc-dark {
+  background-color: #004ba0; }
+
+.bgc-black {
+  background-color: #333333; }
+
+.bgc-white {
+  background-color: #fff; }
+
+.bgc-red {
+  background-color: #ff4181; }
+
+.bgc-gray {
+  background-color: #b0aeb0; }
+
+.font-primary {
+  color: #1976d2; }
+
+.font-light {
+  color: #63a4ff; }
+
+.font-dark {
+  color: #004ba0; }
+
+.font-black {
+  color: #333333; }
+
+.font-white {
+  color: #fff; }
+
+.font-red {
+  color: #ff4181; }
+
+.font-gray {
+  color: #b0aeb0; }
+
+/*# sourceMappingURL=color.css.map */

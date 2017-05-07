@@ -1,0 +1,16 @@
+@import "base";
+
+
+//背景颜色
+@each $name , $color in $colors{
+  .bgc-#{$name}{
+    background-color:$color;
+  }
+}
+//文字颜色
+@each $name , $color in $colors{
+  .font-#{$name}{
+    color: $color;
+  }
+}
+

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,OAAO;EACL,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,mBAAe;EACjC,aAAa,EAAE,IAAI;EACnB,SAAS,EAAE,QAAQ;EACnB,cAAc,EAAE,IAAI;EACpB,aAAK;IACH,SAAS,EAAC,oBAAoB;;AAIlC,iBAKC;EAJC,EAAE;IACA,SAAS,EAAE,QAAQ;IACrB,OAAO,EAAC,CAAC",
+"sources": ["ripple.scss"],
+"names": [],
+"file": "ripple.css"
+}

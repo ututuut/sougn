@@ -1,0 +1,141 @@
+@import "base";
+
+/*.button-l{
+  $baseHeight:map_get($buttonL , "height");
+  border: $baseHeight / 6 solid #fff;
+  height:$baseHeight / 3 + $baseHeight;
+  line-height: $baseHeight / 3 + $baseHeight;
+  border-radius: map_get($buttonL , "radius");
+  padding:0px map_get($buttonL , "padding");
+  font-size:map_get($buttonL , "font");
+}
+
+.button-s{
+  $baseHeight:map_get($buttonS , "height");
+  border: $baseHeight / 6 solid #fff;
+  height:$baseHeight / 3 + $baseHeight;
+  line-height: $baseHeight / 3 + $baseHeight;
+  border-radius: map_get($buttonL , "radius");
+  padding:0px map_get($buttonL , "padding");
+  font-size:map_get($buttonL , "font");
+}*/
+/*******************************************************************/
+@mixin button($button){
+
+  $baseHeight:map_get($button , "height");
+  //margin: round($baseHeight / 6);
+  height:round($baseHeight / 3) + $baseHeight;
+  line-height: round($baseHeight / 3) ;
+  border-radius: map_get($button , "radius");
+  padding:0px map_get($button , "padding");
+  font-size:map_get($button , "font");
+
+}
+
+
+.button-s{
+  @include button($buttonS);
+}
+
+.button-l{
+  @include button($buttonL);
+}
+/*******************************************************************/
+
+
+/*******************************************************************/
+@mixin borderRadius($radius:20px) {
+  border-radius: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+$duration: .4s;
+$checkedColor: map_get($colors , "light");
+$checkedColorPrimary: map_get($colors , "primary");
+.mui-switch {
+  width: 45px;
+  height: 16px;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  @include borderRadius();
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none;
+  &:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    margin-top:-6px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    @include borderRadius();
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  &:checked {
+    border-color: $checkedColor;
+    box-shadow: $checkedColor 0 0 0 16px inset;
+    background-color: $checkedColor;
+    &:before {
+      left: 19px;
+      background-color: $checkedColorPrimary;
+    }
+  }
+  &.mui-switch-animbg {
+    transition: background-color ease $duration;
+    &:before {
+      transition: left 0.3s;
+    }
+    &:checked {
+      box-shadow: #dfdfdf 0 0 0 0 inset;
+      transition: border-color $duration, background-color ease $duration;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+
+  }
+  &.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) $duration, box-shadow cubic-bezier(0, 0, 0, 1) $duration;
+    &:before {
+      transition: left 0.3s;
+    }
+    &:checked {
+      box-shadow: $checkedColor 0 0 0 16px inset;
+      background-color: $checkedColor;
+      transition: border ease $duration, box-shadow ease $duration, background-color ease $duration*3;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+
+  }
+}
+/*******************************************************************/
+
+/*******************************************************************/
+input[type=text],input[type=password]{
+  border-bottom :2px solid map_get($colors , "grayc");
+  &:focus{
+    border-bottom: 2px solid map_get($colors , "primary");
+  }
+}
+
+.input-padding{
+  padding:8px 0px 8px 8px;
+}
+/*******************************************************************/
+
+/////////////////////////////////////////////////////////////////////
+.round{
+  border-radius: 100%;
+}
+/////////////////////////////////////////////////////////////////////
+

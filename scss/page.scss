@@ -1,0 +1,175 @@
+@import "base";
+
+
+
+$margin:15;
+
+.row{// ge shan bu ju
+  width: 100%;
+  //margin:0px -#{$margin}px;
+  margin:0px;
+  @for $i from 1 through 12{
+    .col-#{$i}{
+      width:percentage( $i / 12 );
+      padding:#{$margin}px;
+      min-height:1px;//为了方便调试
+      float: left;
+    }
+  }
+}
+
+@each $name , $value in $shadow{//ying ying
+  .shadow-#{$name}{
+    box-shadow: $value;
+  }
+}
+
+.screen{//巨幕
+  width:100%;
+  background-color: map-get($colors , light);
+  .body{
+    @extend .bgc-center;
+    width: $width;
+    margin:auto;
+    min-height:$screenHeight;
+  }
+}
+
+.bgc-center{//背景图片居中
+  background-size: cover;
+  background-position: center center;
+}
+
+.right{//右浮
+  float: right;
+}
+
+.left{//左浮
+  float: left;
+}
+
+.head{
+  cursor: pointer
+}
+
+.overflow{
+  overflow: auto;
+}
+
+///////////////////////////////////////////////////////////////////////
+
+
+
+.menu-all{
+  width:100%;
+  .menu-el{
+    float: left;
+    border-bottom: 2px solid map_get($colors , "grayc");
+    padding:map_get($menuPadding , "top")  map_get($menuPadding , "right")  map_get($menuPadding , "bottom")  map_get($menuPadding , "left");
+    margin:map_get($menuMargin , "top")  map_get($menuMargin , "right")  map_get($menuMargin , "bottom")  map_get($menuMargin , "left");
+    cursor:pointer;
+    color: map_get($colors , "grayc");
+    &:hover{
+      color: map_get($colors , "black");
+    }
+  }
+  .active{
+    color: map_get($colors , "primary");
+    border-bottom: 2px solid map_get($colors , "primary");
+  }
+}
+///////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////
+.input-group{
+  border:2px solid map_get($colors , "primary");
+  display: inline-block;
+  .input{
+    $baseHeight:map_get($buttonS , "height");
+    height:round($baseHeight / 3) + $baseHeight;
+    line-height: round($baseHeight / 3) ;
+    padding-left:$baseHeight;
+    border:0px;
+    &:focus {
+      border: 0px;
+    }
+  }
+  .input-group{
+    margin: 0px;
+  }
+
+}
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+@for $i from 1 through 5{
+  @each $name , $value in $colors{
+    .border-top-#{$i}-#{$name}{
+      border-top: #{$i}px solid #{$value};
+    }
+  }
+}
+
+@for $i from 1 through 5{
+  @each $name , $value in $colors{
+    .border-right-#{$i}-#{$name}{
+      border-right: #{$i}px solid #{$value};
+    }
+  }
+}
+
+@for $i from 1 through 5{
+  @each $name , $value in $colors{
+    .border-bottom-#{$i}-#{$name}{
+      border-bottom: #{$i}px solid #{$value};
+    }
+  }
+}
+
+@for $i from 1 through 5{
+  @each $name , $value in $colors{
+    .border-left-#{$i}-#{$name}{
+      border-left: #{$i}px solid #{$value};
+    }
+  }
+}
+
+@for $i from 1 through 1{
+  @each $name , $value in $colors{
+    .border-#{$i}-#{$name}{
+      border: #{$i}px solid #{$value};
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////
+.img-center{
+  display:table-cell;
+  vertical-align: middle;
+}
+//////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+.page{
+  border-radius:$page;
+}
+/////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////
+
+.blur{
+  background: inherit;
+  -webkit-filter: blur($blur);
+    -moz-filter: blur($blur);
+    -ms-filter: blur($blur);
+    -o-filter: blur($blur);
+    filter: blur($blur);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+}
+
+////////////////////////////////////////////////////////////////////

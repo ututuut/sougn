@@ -1,0 +1,15 @@
+@import "base";
+
+
+@mixin pop() {
+
+}
+
+
+.pop-round{
+  border-radius: 100%;
+  z-index: 99999;
+  position: fixed;
+  background-color: #fff;
+}
+

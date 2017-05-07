@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../scss/all.css" rel="stylesheet"/>
+    <script type="application/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="application/javascript" src="../../res/js/public.js"></script>
+    <script type="application/javascript" src="../../res/js/pop.js"></script>
+    <style>
+        .close{
+            transform: scale(0.7,0.7);
+            transition:transform .4s;
+        }
+        .close:hover{
+
+            animation: myfirst .4s;
+            animation-fill-mode : forwards;
+        }
+        @keyframes myfirst{
+            10%{
+                transform: scale(0.7,0.7);
+            }
+            100%{
+                transform: scale(1,1);
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <button data-pop="q">asdasd</button>data-pop表示需要弹出的窗口
+    <div style="position: fixed;width: 100%;height: 100%;top: 0px;">
+            <div class="shadow-10 bgc-white page close" style="overflow: hidden;width: 400px;"><!--纸张-->
+                <div class="row" style="overflow: auto;">
+                    <div class="col-8">
+                        <h1 class="font-huge font-line-huge" style="font-weight: 400;">这是</h1>
+                    </div>
+                    <div class="col-4">
+                        <button class="button-s bgc-white font-primary  round right for-ripple " style="transform:rotate(45deg)">+</button>
+                    </div>
+                    <div style="height: 300px;width: 100%;">
+                        <div class="row">
+                            <div class="col-12">ASDASD is a wholesale provider based in Italy that sells co-location, DSL, European transport via Transparent Layer2 services, IP Transit, POPWIFI, Fibersurf, ...</div>
+                        </div>
+                    </div>
+                    <div class="bgc-grayc">
+                        <div class="row" style="overflow: auto">
+                            <div class="col-12" style="overflow: auto" >
+                                <input class="font-white button-s bgc-light right" type="button" value="提交">
+                                <input class="font-white button-s left bgc-grayc" type="button" value="关闭">
+
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script type="application/javascript" src="../../res/js/ripple.js"></script>
+</html>
