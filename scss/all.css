@@ -80,25 +80,25 @@ p {
   font-size: 25px; }
 
 .font-line-big {
-  line-height: 45px; }
+  line-height: 37px; }
 
 .font-medium {
   font-size: 20px; }
 
 .font-line-medium {
-  line-height: 45px; }
+  line-height: 30px; }
 
 .font-normal {
   font-size: 16px; }
 
 .font-line-normal {
-  line-height: 45px; }
+  line-height: 25px; }
 
 .font-small {
   font-size: 14px; }
 
 .font-line-small {
-  line-height: 45px; }
+  line-height: 20px; }
 
 /*.button-l{
   $baseHeight:map_get($buttonL , "height");
@@ -210,6 +210,7 @@ input[type=text], input[type=password] {
 
 .row {
   width: 100%;
+  overflow: auto;
   margin: 0px; }
   .row .col-1 {
     width: 8.33333%;

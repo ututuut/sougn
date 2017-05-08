@@ -6,6 +6,7 @@ $margin:15;
 
 .row{// ge shan bu ju
   width: 100%;
+  overflow: auto;
   //margin:0px -#{$margin}px;
   margin:0px;
   @for $i from 1 through 12{

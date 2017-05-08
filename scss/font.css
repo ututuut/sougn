@@ -1,21 +1,31 @@
 .font-huge {
-  line-height: 45px;
   font-size: 30px; }
 
+.font-line-huge {
+  line-height: 45px; }
+
 .font-big {
-  line-height: 45px;
   font-size: 25px; }
 
+.font-line-big {
+  line-height: 37px; }
+
 .font-medium {
-  line-height: 45px;
   font-size: 20px; }
 
+.font-line-medium {
+  line-height: 30px; }
+
 .font-normal {
-  line-height: 45px;
   font-size: 16px; }
 
+.font-line-normal {
+  line-height: 25px; }
+
 .font-small {
-  line-height: 45px;
   font-size: 14px; }
+
+.font-line-small {
+  line-height: 20px; }
 
 /*# sourceMappingURL=font.css.map */

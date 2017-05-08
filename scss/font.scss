@@ -5,15 +5,15 @@
     font-size:$font;
   }
   .font-line-#{$name}{
-    @if #{$name} == huge{
+    @if $name == "huge"{
       line-height: 45px;
-    }@else if #{$name} == big{
+    }@else if $name == "big"{
       line-height: 37px;
-    }@else if #{$name} == medium{
+    }@else if $name == medium{
       line-height: 30px;
-    }@else if #{$name} == normal{
+    }@else if $name == normal{
       line-height: 25px;
-    }@else if #{$name} == small{
+    }@else if $name == small{
       line-height: 20px;
     }
   }
