@@ -6,10 +6,36 @@
 }
 
 
-.pop-round{
-  border-radius: 100%;
-  z-index: 99999;
-  position: fixed;
-  background-color: #fff;
+.pop-in{
+  transform: scale(0.8,0.8);
+  transition:transform .3s;
+  animation: popin .3s;
+  animation-fill-mode : forwards;
 }
+
+.pop-out{
+  transform: scale(1,1);
+  transition:transform .3s;
+  animation: popout .3s;
+  animation-fill-mode : forwards;
+}
+
+@keyframes popin{
+  10%{
+    transform: scale(0.8,0.8);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+@keyframes popout{
+  10%{
+    transform: scale(1,1);
+  }
+  100%{
+    transform: scale(0.8,0.8);
+  }
+}
+
 

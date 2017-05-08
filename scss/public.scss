@@ -30,3 +30,9 @@ li{
 .box-content{
   box-sizing:content-box;
 }
+
+p{
+  word-break:break-all;
+
+  word-wrap:break-word;
+}

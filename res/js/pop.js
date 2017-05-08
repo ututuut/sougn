@@ -11,32 +11,43 @@
         this.options = $.extend({},this.default ,opt);
     }
     Pop.prototype = {
-        _close:function (){
+        _close:function ($pop){
+            $pop.addClass("pop-out");
+            $pop.removeClass("pop-in");
+
+            setTimeout(function (){
+                $pop.fadeOut();
+            },300);
+
+
 
         },
-        _open:function (){
-            var eleTop = this.$ele.offset().top;
-            var scrollTop = $(document).scrollTop();
+        _open:function ($this){
 
-            var eleToWindowTop = eleTop - scrollTop;
+            var id = $this.attr("data-pop-id");
 
-            var left = this.$ele.offset().left;
+            var $pop = $("#"+id);
 
-            var str = this.options.round.addStr(this.options.round.width);
+            console.log(id);
 
-            $(str).insertAfter("body");
-
-            $("#thisisforpop").css({"position": "fixed","top":eleToWindowTop,"left":left});
+            $pop.css({"display":"table","position":"fixed","visibility":"visible"}).removeClass("pop-out").addClass("pop-in");
 
         },
-        _bind:function (){
+        _bind:function ($this){
+            var id = $this.attr("data-pop-id");
+            var $pop = $("#"+id);
+            var $plugin = this;
+            $pop.find(".close").on("click",function (){//关闭窗口
+                $plugin._close($pop);
+            });
 
+            $this.on("click",function (){//打开窗口
+                $plugin._open($this)
+            });
         }
     }
     $.fn.pop = function (options) {
         var popObj = new Pop(this , options);
-
-        popObj._open();//打开窗口
-        popObj._close();//关闭窗口
+        popObj._bind(this);//绑定事件
     }
 })(jQuery , window , document);

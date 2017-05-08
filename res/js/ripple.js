@@ -15,7 +15,7 @@ var addRippleEffect = function (e) {
     ripple.style.top = top + 'px';
     ripple.style.left = left + 'px';
     ripple.classList.add('show');
-    return false;
+
 }
 
 

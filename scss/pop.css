@@ -1,7 +1,24 @@
-.pop-round {
-  border-radius: 100%;
-  z-index: 99999;
-  position: fixed;
-  background-color: #fff; }
+.pop-in {
+  transform: scale(0.7, 0.7);
+  transition: transform .4s;
+  animation: popin .4s;
+  animation-fill-mode: forwards; }
+
+.pop-out {
+  transform: scale(1, 1);
+  transition: transform .4s;
+  animation: popout .4s;
+  animation-fill-mode: forwards; }
+
+@keyframes popin {
+  10% {
+    transform: scale(0.7, 0.7); }
+  100% {
+    transform: scale(1, 1); } }
+@keyframes popin {
+  10% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(0.7, 0.7); } }
 
 /*# sourceMappingURL=pop.css.map */
