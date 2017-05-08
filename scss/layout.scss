@@ -1,0 +1,40 @@
+$for-left:220px;
+
+$for-left-right:(
+        left:220px,
+        right:220px
+);
+
+#for-left{
+  .left{
+    float: left;
+    width: $for-left;
+    margin-right: -100%;
+  }
+
+  .right{
+    float: left;
+    width:100%;
+  }
+
+  .content{
+    margin-left: $for-left;
+  }
+}
+
+#for-left-right{
+  .left{
+    width:map_get($for-left-right,"left");
+    float: left;
+  }
+  .right{
+    width:map_get($for-left-right,"right");
+    float: right;
+  }
+  .content{
+    margin-left:map_get($for-left-right,"left");
+    margin-right: map_get($for-left-right,"right");
+  }
+}
+
+
