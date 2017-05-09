@@ -139,3 +139,48 @@ input[type=text],input[type=password]{
 }
 /////////////////////////////////////////////////////////////////////
 
+
+
+/////////////////////////////////////////////////////////////////////
+.radio{
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  cursor: pointer;
+  input[type=radio]{
+    width:25px;
+    height:25px;
+    &+i{
+      position: absolute;
+      top:0px;
+      left:0px;
+      content: '';
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background-color: #fff;
+      border:2px solid map_get($colors , "grayc");
+    }
+    &:checked + i::after{
+      position: absolute;
+      opacity: 1;
+      content: ' ';
+      background-color: map_get($colors , "grayc");
+      width:13px;
+      height:13px;
+      border-radius: 100%;
+      top:4px;
+      left:4px;
+    }
+  }
+
+  i{
+    display: block;
+    outline: 0;
+    border:0px;
+    background-color: map_get($colors , "grayc");
+    border-radius: 50%;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////

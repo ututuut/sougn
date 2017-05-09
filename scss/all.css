@@ -208,6 +208,41 @@ input[type=text], input[type=password] {
 .round {
   border-radius: 100%; }
 
+.radio {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  cursor: pointer; }
+  .radio input[type=radio] {
+    width: 25px;
+    height: 25px; }
+    .radio input[type=radio] + i {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      content: '';
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background-color: #fff;
+      border: 2px solid #b0aeb0; }
+    .radio input[type=radio]:checked + i::after {
+      position: absolute;
+      opacity: 1;
+      content: ' ';
+      background-color: #b0aeb0;
+      width: 13px;
+      height: 13px;
+      border-radius: 100%;
+      top: 4px;
+      left: 4px; }
+  .radio i {
+    display: block;
+    outline: 0;
+    border: 0px;
+    background-color: #b0aeb0;
+    border-radius: 50%; }
+
 .row {
   width: 100%;
   overflow: auto;

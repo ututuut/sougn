@@ -25,7 +25,9 @@
                         <a href="http://www.htmleaf.com/jQuery/jquery-tools/201606023549.html">省市区三级列表</a>
                     </div>
                     <div class="col-3">
-
+                        <p class="font-small font-line-small">rgb转亮度计算公式   0.299*R+0.587*G+0.114*B = Y亮度</p>
+                        <p class="font-small font-line-small">夜间模式最亮颜色亮度低于3.4nit，主体颜色为0.034nit</p>
+                        <p class="font-small font-line-small">夜间模式文字与背景色对比度3:1-4.5:1，图片与背景色对比度3:1-7:1</p>
                     </div>
                 </div>
                 <div class="row" >
@@ -491,6 +493,30 @@
                     </div>
 
                 </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label class="radio">
+
+                            <input type="radio" name="radio"><i></i>
+                        </label>
+                        <p class="font-small font-line-small">单选钮1</p>
+                        <label class="radio">
+
+                            <input type="radio" name="radio"><i></i>
+                        </label>
+                        <p class="font-small font-line-small">单选钮2</p>
+                        <label class="radio">
+
+                            <input type="radio" name="radio"><i></i>
+                        </label>
+                        <p class="font-small font-line-small">单选钮3</p>
+                    </div>
+                    <div class="col-9">
+                        <p class="font-small font-line-small">
+                            这是单选钮，自己把自己坑了。。。。。。。。。。。。这个东西在base文件中是不可以配置的。因为会有一个像素的偏差，还不如自己算咧
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -524,6 +550,14 @@
                     </div>
                     <div calss="col-9">
                         <p class="font-small font-line-small">打开了就无法关闭了，没有写.close类</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button class="button-s bgc-primary font-white for-ripple" data-pop-id="pop2" id="button3">空白弹出框</button>
+                    </div>
+                    <div class="col-9">
+                        一个空白的弹出框，什么也没有，需要自己完善内容
                     </div>
                 </div>
             </div>
@@ -640,6 +674,22 @@
         </div>
     </div>
 </div>
+
+    <div style="position: fixed;display:none;width: 100%;height: 100%;top: 0px;" id="pop2">
+        <div  class="img-center">
+            <div class="shadow-10 bgc-white page close " style="overflow: hidden;margin: auto;width: 400px;"><!--纸张-->
+                <div class="bgc-light" style="height: 100px;padding: 15px;">
+                    <p class="font-huge font-line-huge font-white">空白的对话框</p>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="font-small font-line-small">这是一个空白的框，需要自己根据业务添加</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 <script type="application/javascript" src="../res/js/ripple.js"></script>
 <script>
@@ -648,6 +698,8 @@
         $("#button").pop();
 
         $("#button2").pop();
+
+        $("#button3").pop();
     });
 </script>
 </html>
