@@ -4,6 +4,12 @@
 
 $margin:15;
 
+$tap:(
+        padding:2px 2px 2px 8px,
+        spanWeight:700,
+        spanPadding:0px 2px
+);
+
 .row{// ge shan bu ju
   width: 100%;
   overflow: auto;
@@ -173,4 +179,15 @@ $margin:15;
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
 }
 
+////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+.tap{
+  background-color: rgba(map_get($colors , "light") , .4);
+  padding:map_get($tap , "padding");
+  span{
+    font-weight: map_get($tap , "spanWeight");
+    padding:map_get($tap , "spanPadding");
+  }
+}
 ////////////////////////////////////////////////////////////////////

@@ -19,6 +19,9 @@
   padding:0px map_get($buttonL , "padding");
   font-size:map_get($buttonL , "font");
 }*/
+
+
+$headInput:45px;
 /*******************************************************************/
 @mixin button($button){
 
@@ -183,4 +186,15 @@ input[type=text],input[type=password]{
   }
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+.head-input{
+  //background-color: lighten(map_get($colors , "primary"),8%);
+  background-color: #fff;
+  border-bottom:0px solid #fff;
+  padding-left: $headInput;
+  &:focus{
+    background-color: map_get($colors,"white");
+  }
+}
 /////////////////////////////////////////////////////////////////////

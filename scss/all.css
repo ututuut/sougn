@@ -243,6 +243,11 @@ input[type=text], input[type=password] {
     background-color: #b0aeb0;
     border-radius: 50%; }
 
+.head-input {
+  background-color: #fff;
+  border-bottom: 0px solid #fff;
+  padding-left: 45px; }
+
 .row {
   width: 100%;
   overflow: auto;
@@ -844,6 +849,13 @@ input[type=text], input[type=password] {
   -o-filter: blur(6px);
   filter: blur(6px);
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false); }
+
+.tap {
+  background-color: rgba(99, 164, 255, 0.4);
+  padding: 2px 2px 2px 8px; }
+  .tap span {
+    font-weight: 700;
+    padding: 0px 2px; }
 
 .ripple {
   position: absolute;
